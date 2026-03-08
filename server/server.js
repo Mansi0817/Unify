@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const http = require("http");
+import userRoutes from "./routes/userRoutes.js";
+
+app.use("/api/user", userRoutes);
 
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
