@@ -7,11 +7,8 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import VideoCall from "./pages/VideoCall";
-import Dashboard from "./pages/Dashboard"
 
-export default function App(){
-return <Dashboard/>
-}
+import Layout from "./components/Layout";
 
 export default function App() {
   return (
@@ -19,13 +16,20 @@ export default function App() {
 
       <Routes>
 
+        {/* Auth pages */}
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/chat" element={<Chat />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/videocall" element={<VideoCall />} />
+
+        {/* App pages with sidebar layout */}
+        <Route element={<Layout />}>
+
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/videocall" element={<VideoCall />} />
+
+        </Route>
 
       </Routes>
 
