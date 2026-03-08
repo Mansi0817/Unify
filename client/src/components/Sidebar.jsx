@@ -1,37 +1,28 @@
-import React from "react";
+import "../styles/theme.css"
+import {FaComments,FaVideo,FaUser} from "react-icons/fa"
 
-export default function Sidebar() {
-  return (
-    <div className="hidden md:flex flex-col w-64 bg-gray-800 text-white p-4">
+export default function Sidebar(){
 
-      <h1 className="text-2xl font-bold mb-6">
-        Unify
-      </h1>
+return(
 
-      <nav className="space-y-4">
+<div className="sidebar">
 
-        <a href="/dashboard" className="hover:text-blue-400">
-          Dashboard
-        </a>
+<div className="logo">Unify</div>
 
-        <a href="/chat" className="hover:text-blue-400">
-          Chat
-        </a>
+<div className="nav-item">
+<FaComments/> Chat
+</div>
 
-        <a href="/videocall" className="hover:text-blue-400">
-          Video Call
-        </a>
+<div className="nav-item">
+<FaVideo/> Video Call
+</div>
 
-        <a href="/profile" className="hover:text-blue-400">
-          Profile
-        </a>
+<div className="nav-item">
+<FaUser/> Profile
+</div>
 
-        <a href="/settings" className="hover:text-blue-400">
-          Settings
-        </a>
+</div>
 
-      </nav>
+)
 
-    </div>
-  );
 }

@@ -1,36 +1,105 @@
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar"
+import "../styles/theme.css"
 
-export default function Dashboard() {
-  return (
-    <div className="flex h-screen bg-gray-900 text-white">
+export default function Dashboard(){
 
-      <Sidebar />
+return(
 
-      <div className="flex-1 flex flex-col">
+<div className="layout">
 
-        <Navbar />
+<Sidebar/>
 
-        <div className="p-6 grid md:grid-cols-3 gap-6">
+<div className="main">
 
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h2 className="text-xl font-bold">Chats</h2>
-            <p className="text-gray-400 mt-2">Open conversations</p>
-          </div>
+<h2>Dashboard</h2>
 
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h2 className="text-xl font-bold">Video Calls</h2>
-            <p className="text-gray-400 mt-2">Start meeting</p>
-          </div>
+<div className="grid">
 
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h2 className="text-xl font-bold">Groups</h2>
-            <p className="text-gray-400 mt-2">Manage groups</p>
-          </div>
+{/* Chat */}
 
-        </div>
+<div className="card">
 
-      </div>
-    </div>
-  );
+<h3>Group Chat</h3>
+
+<div className="chat">
+
+<div className="messages">
+
+<div className="message">Hey team 👋</div>
+<div className="message me">Working on the UI</div>
+<div className="message">Looks great!</div>
+
+</div>
+
+</div>
+
+<div className="chat-input">
+
+<input placeholder="Type message"/>
+<button>Send</button>
+
+</div>
+
+</div>
+
+{/* Video */}
+
+<div className="card">
+
+<h3>Video Call</h3>
+
+<div className="video-grid">
+
+<div className="video-box">User 1</div>
+<div className="video-box">User 2</div>
+<div className="video-box">User 3</div>
+<div className="video-box">User 4</div>
+
+</div>
+
+</div>
+
+{/* Whiteboard */}
+
+<div className="card">
+
+<h3>Whiteboard</h3>
+
+<div style={{
+height:"200px",
+background:"white",
+borderRadius:"10px"
+}}/>
+
+</div>
+
+{/* Profile */}
+
+<div className="card">
+
+<h3>User Profile</h3>
+
+<div className="profile">
+
+<img src="https://i.pravatar.cc/100"/>
+
+<div>
+
+<h4>Alex Johnson</h4>
+<p>Full Stack Developer</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+)
+
 }

@@ -7,6 +7,11 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import VideoCall from "./pages/VideoCall";
+import Dashboard from "./pages/Dashboard"
+
+export default function App(){
+return <Dashboard/>
+}
 
 export default function App() {
   return (

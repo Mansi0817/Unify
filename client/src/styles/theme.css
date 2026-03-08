@@ -1,0 +1,144 @@
+body{
+margin:0;
+font-family: "Segoe UI", sans-serif;
+background: linear-gradient(135deg,#0f172a,#020617);
+color:white;
+}
+
+/* layout */
+
+.layout{
+display:flex;
+height:100vh;
+}
+
+/* sidebar */
+
+.sidebar{
+width:250px;
+background:#111827;
+padding:20px;
+display:flex;
+flex-direction:column;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+margin-bottom:30px;
+}
+
+.nav-item{
+padding:12px;
+margin-bottom:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.nav-item:hover{
+background:#1f2937;
+}
+
+/* main */
+
+.main{
+flex:1;
+padding:25px;
+overflow:auto;
+}
+
+/* cards */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.card{
+background:#1f2937;
+border-radius:12px;
+padding:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* chat */
+
+.chat{
+display:flex;
+height:400px;
+}
+
+.messages{
+flex:1;
+padding:10px;
+overflow:auto;
+}
+
+.message{
+background:#374151;
+padding:8px 12px;
+border-radius:8px;
+margin-bottom:10px;
+width:fit-content;
+}
+
+.message.me{
+background:#2563eb;
+margin-left:auto;
+}
+
+/* input */
+
+.chat-input{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.chat-input input{
+flex:1;
+padding:10px;
+border-radius:8px;
+border:none;
+}
+
+.chat-input button{
+background:#2563eb;
+border:none;
+color:white;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* video */
+
+.video-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.video-box{
+height:160px;
+background:black;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* profile */
+
+.profile{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.profile img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
